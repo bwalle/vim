@@ -473,10 +473,6 @@ au FileType moin iabbrev h5 ===== =====<Left><Left><Left><Left><Left><Left>
 " Wikipedia: tt
 au FileType Wikipedia iabbrev tt <tt></tt><Left><Left><Left><Left><Left>
 
-" C/C++
-au FileType c,cpp iabbrev {{{ /* {{{ */<Left><Left><Left><Left><Left><Left><Left>
-au FileType c,cpp iabbrev }}} /* }}} */
-
 " Tipp, Hinweis, usw
 au FileType moin iabbrev mointip {{{#!wiki tip<CR>'''Tipp'''<CR><CR><CR>}}}<Up>
 au FileType moin iabbrev toc <<TableOfContents(2)>>
