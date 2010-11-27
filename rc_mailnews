@@ -1,0 +1,54 @@
+source ~/.vimrc
+
+set bg=light
+set spelllang=de_de,en_gb spell
+
+highlight mailQuoted1 ctermfg=darkblue
+highlight mailQuoted2 ctermfg=darkgreen
+highlight mailQuoted3 ctermfg=darkred
+highlight mailQuoted4 ctermfg=darkmagenta
+highlight mailSignature ctermfg=grey
+
+" Autokommando loeschen
+autocmd! BufReadPost *
+
+" Titel nicht anzeigen
+set notitle
+
+map! <F10> :r! ~/.mutt/sigs/random<CR>
+map! <F11> :r ~/.mutt/sigs/privat2<CR>
+map! <F12> :r ~/.mutt/sigs/privat<CR>
+
+abbrev mfg Mit freundlichen Grüßen
+abbrev gb Gruß,<CR>Bernhard
+abbrev tb Thanks,<CR>   Bernhard
+abbrev sgdh Sehr geehrte Damen und Herren,
+
+" don't show matching brackets
+set noshowmatch
+
+set tw=72
+
+" emulate Tabs in mails
+set et			
+set ts=4
+set sw=4
+
+" Filetype mail
+set ft=mail		
+set nobackup
+
+set notitle
+set noicon
+set nonumber
+
+"au BufRead /tmp/mutt* normal :g/^> -- $/,/^$/-1d/^$:nohlgg
+
+" errorbells: keine akustische Fehlermeldung
+set noerrorbells
+
+" enable Unicode quotation marks
+"source ~/.vim/plugin/unicycle.vim
+"call UniCycleOn()
+
+" vim: set ft=vim ts=2 sw=2 et:
