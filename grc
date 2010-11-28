@@ -126,7 +126,7 @@ imap <D-9> <ESC>9gta
 
 " Farbschema
 " set bg=light
-colorscheme sorceror  "liquidcarbon
+colorscheme stackoverflow  "liquidcarbon
 
 " Keine Strings und Zahlen in C-Kommentaren
 if exists("c_comment_strings")
