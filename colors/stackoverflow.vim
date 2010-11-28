@@ -12,7 +12,7 @@ let colors_name = "stackoverflow"
 " =============================================================================
 hi Normal       guifg=#000000           guibg=#e9e9e9           gui=NONE
 hi ColorColumn  guifg=NONE              guibg=#e6e6e6
-hi Cursor       guifg=bg                guibg=#F4A83D           gui=NONE
+hi Cursor       guifg=bg                guibg=fg                gui=NONE
 hi CursorIM     guifg=bg                guibg=fg                gui=NONE
 hi lCursor      guifg=bg                guibg=fg                gui=NONE
 hi DiffAdd      guifg=NONE              guibg=#9d9d9d           gui=NONE
