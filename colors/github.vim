@@ -47,7 +47,7 @@ hi FoldeColumn  guifg=#808080 guibg=#ECECEC gui=bold
 
 hi VertSplit	guibg=#bbbbbb guifg=#bbbbbb gui=none
 hi StatusLine   guibg=#bbbbbb guifg=#404040 gui=bold
-hi StatusLineNC guibg=#d4d4d4 guifg=#404040 gui=italic
+hi StatusLineNC guibg=#d4d4d4 guifg=#404040 gui=none
 " }}}
 
 " {{{ Misc
@@ -56,7 +56,7 @@ hi MoreMsg		guifg=#990000
 
 hi Title		guifg=#ef5939
 hi WarningMsg	guifg=#ef5939
-hi SpecialKey   guifg=#177F80 gui=italic
+hi SpecialKey   guifg=#177F80 gui=none
 
 hi MatchParen	guibg=#cdcdfd guifg=#000000
 hi Underlined	guifg=#000000 gui=underline
@@ -66,8 +66,8 @@ hi Directory	guifg=#990000
 " {{{ Search, Visual, etc
 hi Visual		guifg=#FFFFFF guibg=#3465a4 gui=none
 hi VisualNOS    guifg=#FFFFFF guibg=#204a87 gui=none
-hi IncSearch	guibg=#cdcdfd guifg=#000000 gui=italic
-hi Search		guibg=#cdcdfd guifg=#000000 gui=italic
+hi IncSearch	guibg=#cdcdfd guifg=#000000 gui=none
+hi Search		guibg=#cdcdfd guifg=#000000 gui=none
 " }}}
 
 " {{{ Syntax groups
@@ -96,7 +96,7 @@ hi TypeDef      guifg=#000000 gui=bold
 hi WildMenu     guifg=#7fbdff guibg=#425c78 gui=none
 
 hi Pmenu        guibg=#808080 guifg=#ffffff gui=bold
-hi PmenuSel     guibg=#cdcdfd guifg=#000000 gui=italic
+hi PmenuSel     guibg=#cdcdfd guifg=#000000 gui=none
 hi PmenuSbar    guibg=#000000 guifg=#444444
 hi PmenuThumb   guibg=#aaaaaa guifg=#aaaaaa
 " }}}
