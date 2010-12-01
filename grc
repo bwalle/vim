@@ -22,15 +22,15 @@ set nocursorline
 
 " Schriftart
 if has("gui_gtk2")
-  "set guifontset=""
-  "set guifont=Lucida\ Sans\ Typewriter\ 10
-  "set guifont=Droid\ Sans\ Mono\ 10
-  "set guifont=Inconsolata\ 12
-  "set guifont=Fixed\ 11
-  set guifont=DejaVu\ Sans\ Mono\ 9.6
-  "set guifont=Inconsolata\ 12
-  "set guifont=Terminus\ 12
-  " set guifont=Fixed\ 11
+   " set guifontset=""
+   " set guifont=Lucida\ Sans\ Typewriter\ 10
+   " set guifont=Droid\ Sans\ Mono\ 10
+   " set guifont=Inconsolata\ 12
+   " set guifont=Fixed\ 11
+   " set guifont=DejaVu\ Sans\ Mono\ 9.6
+   " set guifont=Inconsolata\ 12
+   " set guifont=Fixed\ 11
+   set guifont=Terminus\ 12
 endif
 if has("gui_win32")
   set guifont=SGIScreen:h11:cANSI
@@ -126,7 +126,7 @@ imap <D-9> <ESC>9gta
 
 " Farbschema
 " set bg=light
-colorscheme stackoverflow  "liquidcarbon
+colorscheme macvim  "liquidcarbon
 
 " Keine Strings und Zahlen in C-Kommentaren
 if exists("c_comment_strings")
