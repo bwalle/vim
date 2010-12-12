@@ -46,7 +46,7 @@ hi SpellCap     guisp=#0000ff gui=undercurl
 hi SpellLocal   guisp=#008b8b gui=undercurl
 hi SpellRare    guisp=#ff00ff gui=undercurl
 hi StatusLine   guifg=#000000 guibg=#808070 gui=bold
-hi StatusLineNC guifg=#000000 guibg=#404c4c gui=italic
+hi StatusLineNC guifg=#000000 guibg=#404c4c gui=NONE
 hi VertSplit    guifg=#404c4c guibg=#404c4c gui=NONE
 hi TabLine      guifg=fg      guibg=#d3d3d3 gui=underline
 hi TabLineFill  guifg=fg      guibg=bg      gui=reverse
@@ -57,7 +57,7 @@ hi WarningMsg   guifg=#ee9a00 guibg=bg      gui=NONE
 hi WildMenu     guifg=#000000 guibg=#87ceeb gui=NONE
 
 "  Syntax highlighting
-hi Comment      guifg=#707670 gui=italic
+hi Comment      guifg=#707670 gui=NONE
 hi Boolean      guifg=#ff9800 gui=NONE
 hi String       guifg=#779b70 gui=NONE
 hi Identifier   guifg=#9ebac2 gui=NONE
@@ -69,13 +69,13 @@ hi Constant     guifg=#ff9800 gui=NONE
 hi Number       guifg=#cc8800 gui=NONE
 hi Special      guifg=#719611 gui=NONE
 hi PreProc      guifg=#528b8b gui=NONE
-hi Todo         guifg=#8f6f8f guibg=#202020 gui=italic,underline,bold
+hi Todo         guifg=#8f6f8f guibg=#202020 gui=underline,bold
 
 " Diff
-hi diffOldFile      guifg=#da70d6   guibg=NONE      gui=italic
-hi diffNewFile      guifg=#ffff00   guibg=NONE      gui=italic
-hi diffFile         guifg=#ffa500   guibg=NONE      gui=italic
-hi diffLine         guifg=#ff00ff   guibg=NONE      gui=italic
+hi diffOldFile      guifg=#da70d6   guibg=NONE      gui=NONE
+hi diffNewFile      guifg=#ffff00   guibg=NONE      gui=NONE
+hi diffFile         guifg=#ffa500   guibg=NONE      gui=NONE
+hi diffLine         guifg=#ff00ff   guibg=NONE      gui=NONE
 hi link             diffOnly        Constant
 hi link             diffIdentical   Constant
 hi link             diffDiffer      Constant
