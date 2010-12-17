@@ -33,7 +33,7 @@ set autowrite
 set mouse=a
 
 set laststatus=2
-set statusline=%-3.3n\ %t\ \ %h%m%r%w\ \ \ %=\ %-10.(L%l,C%c%V%)\ %<%P
+set statusline=%-3.3n\ %t\ \ %h%m%r%w\ %([%{Tlist_Get_Tagname_By_Line()}]%)\ \ \ %=\ %-10.(L%l,C%c%V%)\ %<%P
 
 " errorbells: keine akustische Fehlermeldung
 set noerrorbells
