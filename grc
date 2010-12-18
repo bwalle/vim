@@ -126,7 +126,12 @@ imap <D-9> <ESC>9gta
 
 " Farbschema
 " set bg=dark
-colorscheme sorcerer
+if has("gui_macvim")
+    set bg=light
+    colorscheme macvim
+else
+    colorscheme sorcerer
+endif
 
 " Keine Strings und Zahlen in C-Kommentaren
 if exists("c_comment_strings")
