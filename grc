@@ -38,7 +38,7 @@ endif
 if has("gui_macvim")
   set guifont=Menlo:h14
   set linespace=0
-	set transp=8
+	set transp=0
 endif
 
 " Virtueller Piep faktisch deaktivieren
