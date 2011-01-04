@@ -70,19 +70,19 @@ highlight SpellErrors ctermfg=Red guifg=Red cterm=underline gui=underline term=r
 " kein blinkender Cursor
 set gcr=a:blinkoff0
 
-" use GUI tabs only on Mac
-if !has("gui_macvim")
-  set guioptions-=e
-endif
-
 set guioptions-=L
 set guioptions-=g
 set guioptions+=m " no menu bar
 set guioptions-=t " no tearoff menus
-set guioptions-=T " no toolbar
 "if !has("gui_macvim")
 "  set guioptions+=c " console dialogs
 "endif
+
+" use GUI tabs only on Mac
+if !has("gui_macvim")
+  set guioptions-=e
+  set guioptions-=T " no toolbar
+endif
 
 map <M-1> 1gt
 map <M-2> 2gt
