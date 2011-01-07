@@ -290,6 +290,12 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Show_Menu = 1
 let Tlist_Max_Submenu_Items = 50
+if has("unix")
+  let s:uname = system("uname")
+  if s:uname == "Darwin" || s:uname == "Darwin\n"
+    let Tlist_Ctags_Cmd = "/opt/local/bin/ctags"
+  endif
+endif
 
 " bufExplorer
 let g:bufExplorerDefaultHelp=0
