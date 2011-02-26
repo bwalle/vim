@@ -33,7 +33,7 @@ set autowrite
 set mouse=a
 
 set laststatus=2
-set statusline=%-3.3n\ %t\ \ %h%m%r%w\ %([%{Tlist_Get_Tagname_By_Line()}]%)\ \ \ %=\ %-10.(L%l,C%c%V%)\ %<%P
+set statusline=%-3.3n\ %t\ \ %h%m%r%w\ %(%)\ \ \ %=\ %-10.(L%l,C%c%V%)\ %<%P
 
 " errorbells: keine akustische Fehlermeldung
 set noerrorbells
@@ -280,7 +280,7 @@ let g:EnhCommentifyRespectIndent = 'yes'
 let g:EnhCommentifyPretty = 'yes'
 
 " Taglist
-nnoremap <silent> <F8> :TlistToggle<CR>
+nnoremap <silent> <F8> :TagbarToggle<CR>
 let Tlist_Process_File_Always = 0
 let Tlist_Use_Right_Window = 1
 let g:Tlist_Enable_Fold_Column = 0
@@ -293,7 +293,7 @@ let Tlist_Max_Submenu_Items = 50
 if has("unix")
   let s:uname = system("uname")
   if s:uname == "Darwin" || s:uname == "Darwin\n"
-    let Tlist_Ctags_Cmd = "/opt/local/bin/ctags"
+	let g:tagbar_ctags_bin = "/opt/local/bin/ctags"
   endif
 endif
 
