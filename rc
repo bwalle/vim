@@ -269,6 +269,7 @@ let spec_chglog_format = "%a %b %d %Y - Bernhard Walle <bernhard@bwalle.de>"
 
 " Commentify
 let g:EnhCommentifyUseBlockIndent = 'Yes'
+let g:EnhCommentifyBindInInsert = 'No'
 
 let OmniCpp_MayCompleteDot = 0
 let OmniCpp_MayCompleteArrow = 0
