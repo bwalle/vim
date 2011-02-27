@@ -183,4 +183,9 @@ else
   imap <M-Right> gt
 endif
 
+" maximize vim both horizontally and vertically on Mac Vim
+if has("gui_macvim")
+  set fuoptions=maxvert,maxhorz
+endif
+
 " vim: set sw=2 ts=2 ft=vim foldmethod=marker:
