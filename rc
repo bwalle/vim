@@ -298,6 +298,9 @@ if has("unix")
   endif
 endif
 
+" Tagbar
+let g:tagbar_sort = 0
+
 " bufExplorer
 let g:bufExplorerDefaultHelp=0
 let g:bufExplorerOpenMode=1
