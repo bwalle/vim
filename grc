@@ -27,10 +27,10 @@ if has("gui_gtk2")
    " set guifont=Droid\ Sans\ Mono\ 10
    " set guifont=Inconsolata\ 12
    " set guifont=Fixed\ 11
-   " set guifont=DejaVu\ Sans\ Mono\ 9.6
+   set guifont=DejaVu\ Sans\ Mono\ 9.6
    " set guifont=Inconsolata\ 12
    " set guifont=Fixed\ 11
-   set guifont=Terminus\ 12
+   " set guifont=Terminus\ 12
 endif
 if has("gui_win32")
   set guifont=SGIScreen:h11:cANSI
@@ -128,10 +128,10 @@ imap <D-9> <ESC>9gta
 " set bg=dark
 if has("gui_macvim")
     set bg=light
-    colorscheme macvim
 else
-    colorscheme sorcerer
+    set bg=dark
 endif
+colorscheme macvim
 
 " Keine Strings und Zahlen in C-Kommentaren
 if exists("c_comment_strings")
