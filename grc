@@ -72,7 +72,7 @@ set gcr=a:blinkoff0
 
 set guioptions-=L
 set guioptions-=g
-set guioptions+=m " no menu bar
+set guioptions-=m " no menu bar
 set guioptions-=t " no tearoff menus
 "if !has("gui_macvim")
 "  set guioptions+=c " console dialogs
