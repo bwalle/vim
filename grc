@@ -27,10 +27,10 @@ if has("gui_gtk2")
    " set guifont=Droid\ Sans\ Mono\ 10
    " set guifont=Inconsolata\ 12
    " set guifont=Fixed\ 11
-   set guifont=DejaVu\ Sans\ Mono\ 9.6
+   " set guifont=DejaVu\ Sans\ Mono\ 9.6
    " set guifont=Inconsolata\ 12
    " set guifont=Fixed\ 11
-   " set guifont=Terminus\ 12
+   set guifont=Terminus\ 12
 endif
 if has("gui_win32")
   set guifont=SGIScreen:h11:cANSI
@@ -72,8 +72,8 @@ set gcr=a:blinkoff0
 
 set guioptions-=L
 set guioptions-=g
-set guioptions-=m " no menu bar
-set guioptions-=t " no tearoff menus
+set guioptions+=m " menu bar
+set guioptions-=t " tearoff menus
 "if !has("gui_macvim")
 "  set guioptions+=c " console dialogs
 "endif
@@ -81,7 +81,7 @@ set guioptions-=t " no tearoff menus
 " use GUI tabs only on Mac
 if !has("gui_macvim")
   set guioptions-=e
-  set guioptions-=T " no toolbar
+  set guioptions+=T " toolbar
 endif
 
 map <M-1> 1gt
