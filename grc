@@ -38,7 +38,7 @@ if has("gui_win32")
   set guifont=SGIScreen:h11:cANSI
 endif
 if has("gui_macvim")
-  set guifont=Liberation\ Mono:h14
+  set guifont=Menlo:h14
   set linespace=0
 	set transp=0
 endif
