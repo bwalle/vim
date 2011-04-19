@@ -133,7 +133,7 @@ if has("gui_macvim")
 else
     set bg=dark
 endif
-colorscheme sorcerer
+colorscheme herald
 
 " Keine Strings und Zahlen in C-Kommentaren
 if exists("c_comment_strings")
