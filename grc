@@ -70,7 +70,7 @@ highlight SpellErrors ctermfg=Red guifg=Red cterm=underline gui=underline term=r
 " menu Editieren.C\ Header\ hinzufügen :call AddIfndefGuard()<CR>
 
 " kein blinkender Cursor
-set gcr=a:blinkoff0
+set gcr=a:blinkoff0,a:hor10-Cursor/lcursor
 
 set guioptions-=L
 set guioptions-=g
@@ -189,5 +189,7 @@ endif
 if has("gui_macvim")
   set fuoptions=maxvert,maxhorz
 endif
+
+hi Cursor       guifg=NONE    guibg=#ffffff gui=NONE
 
 " vim: set sw=2 ts=2 ft=vim foldmethod=marker:
