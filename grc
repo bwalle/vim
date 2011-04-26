@@ -70,7 +70,7 @@ highlight SpellErrors ctermfg=Red guifg=Red cterm=underline gui=underline term=r
 " menu Editieren.C\ Header\ hinzufügen :call AddIfndefGuard()<CR>
 
 " kein blinkender Cursor
-set gcr=a:blinkoff0,a:hor10-Cursor/lcursor
+set gcr=a:blinkoff0
 
 set guioptions-=L
 set guioptions-=g
