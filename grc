@@ -27,12 +27,12 @@ if has("gui_gtk2")
    " set guifont=Droid\ Sans\ Mono\ 10
    " set guifont=Inconsolata\ 12
    " set guifont=Fixed\ 11
-   " set guifont=DejaVu\ Sans\ Mono\ 9.6
+   set guifont=DejaVu\ Sans\ Mono\ 9.6
    " set guifont=Inconsolata\ 12
    " set guifont=Fixed\ 11
    " set guifont=Terminus\ 12
    " set guifont=Liberation\ Mono\ 10
-   set guifont=Inconsolata-g\ Medium\ 10
+   " set guifont=Inconsolata-g\ Medium\ 10
 endif
 if has("gui_win32")
   set guifont=SGIScreen:h11:cANSI
