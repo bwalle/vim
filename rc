@@ -184,6 +184,7 @@ autocmd BufRead COMMIT_EDITMSG setlocal ft=gitcommit noml spelllang=en_gb spell
 
 " Tabs 
 set et
+autocmd BufRead *.make set ft=make
 autocmd Filetype make set noet
 autocmd Filetype automake set noet
 autocmd Filetype c,cpp set noet ts=8 sw=8
