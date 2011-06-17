@@ -397,7 +397,7 @@ augroup filetypedetect
   autocmd BufRead *tmpmsg* set ft=mail nonumber
   autocmd BufRead kontact* set ft=mail nonumber tw=72
   autocmd BufRead kmail* set ft=mail nonumber tw=72
-  autocmd BufRead,BufNewFile hg-editor-*.txt setf hgcommit
+  autocmd BufRead,BufNewFile hg-editor-*.txt set ft=hgcommit
 augroup END
 
 " autocmd BufEnter,BufReadPost,BufRead,BufNewFile * if &diff | set nonumber |  endif
