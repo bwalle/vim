@@ -194,6 +194,8 @@ autocmd Filetype asm set ts=8 sw=8
 autocmd FileType html,xml,xsl let g:closetag_html_style=1
 autocmd FileType html,xml,xsl let b:unaryTagsStack="area base br dd dt hr img input link meta param"
 
+" kconfig files
+autocmd FileType kconfig set ts=8 sw=8 noet
 
 " When starting to edit a file:
 "   For C and C++ files set formatting of comments and set C-indenting on.
