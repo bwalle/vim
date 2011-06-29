@@ -178,12 +178,14 @@ if has("gui_macvim")
   map <D-Right> gt
   imap <D-Left> gT
   imap <D-Right> gt
+  noremap <silent> <D-l> :BufExplorer<CR>
 else
   " map Meta-Left/Right to switch tabs on real computers
   map <M-Left> gT
   map <M-Right> gt
   imap <M-Left> gT
   imap <M-Right> gt
+  noremap <silent> <M-l> :BufExplorer<CR>
 endif
 
 " maximize vim both horizontally and vertically on Mac Vim
