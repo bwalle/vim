@@ -2,10 +2,9 @@
 "
 " SVN extension for VCSCommand.
 "
-" Version:       VCS development
 " Maintainer:    Bob Hiestand <bob.hiestand@gmail.com>
 " License:
-" Copyright (c) 2007 Bob Hiestand
+" Copyright (c) Bob Hiestand
 "
 " Permission is hereby granted, free of charge, to any person obtaining a copy
 " of this software and associated documentation files (the "Software"), to
@@ -71,7 +70,7 @@ let s:svnFunctions = {}
 " Returns the executable used to invoke git suitable for use in a shell
 " command.
 function! s:Executable()
-	return shellescape(VCSCommandGetOption('VCSCommandSVNExec', 'svn'))
+	return VCSCommandGetOption('VCSCommandSVNExec', 'svn')
 endfunction
 
 " Function: s:DoCommand(cmd, cmdName, statusText, options) {{{2

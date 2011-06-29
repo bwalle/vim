@@ -2,10 +2,9 @@
 "
 " git extension for VCSCommand.
 "
-" Version:       VCS development
 " Maintainer:    Bob Hiestand <bob.hiestand@gmail.com>
 " License:
-" Copyright (c) 2008 Bob Hiestand
+" Copyright (c) Bob Hiestand
 "
 " Permission is hereby granted, free of charge, to any person obtaining a copy
 " of this software and associated documentation files (the "Software"), to
@@ -69,7 +68,7 @@ let s:gitFunctions = {}
 " Returns the executable used to invoke git suitable for use in a shell
 " command.
 function! s:Executable()
-	return shellescape(VCSCommandGetOption('VCSCommandGitExec', 'git'))
+	return VCSCommandGetOption('VCSCommandGitExec', 'git')
 endfunction
 
 " Function: s:DoCommand(cmd, cmdName, statusText, options) {{{2

@@ -2,10 +2,9 @@
 "
 " SVK extension for VCSCommand.
 "
-" Version:       VCS development
 " Maintainer:    Bob Hiestand <bob.hiestand@gmail.com>
 " License:
-" Copyright (c) 2007 Bob Hiestand
+" Copyright (c) Bob Hiestand
 "
 " Permission is hereby granted, free of charge, to any person obtaining a copy
 " of this software and associated documentation files (the "Software"), to
@@ -64,7 +63,7 @@ let s:svkFunctions = {}
 " Returns the executable used to invoke SVK suitable for use in a shell
 " command.
 function! s:Executable()
-	return shellescape(VCSCommandGetOption('VCSCommandSVKExec', 'svk'))
+	return VCSCommandGetOption('VCSCommandSVKExec', 'svk')
 endfunction
 
 " Function: s:DoCommand(cmd, cmdName, statusText, options) {{{2
@@ -123,7 +122,7 @@ function! s:svkFunctions.Annotate(argList)
 
 	let resultBuffer = s:DoCommand('blame' . options, 'annotate', caption, {})
 	if resultBuffer > 0
-		normal 1G2dd
+		normal! 1G2dd
 	endif
 	return resultBuffer
 endfunction
