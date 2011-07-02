@@ -112,7 +112,7 @@ function s:ClangCompleteInit()
     endif
 
     if !exists('g:clang_exec')
-        let g:clang_exec = '/Users/bwalle/bin/clang'
+        let g:clang_exec = 'clang'
     endif
 
     if !exists('g:clang_user_options')
@@ -207,7 +207,7 @@ function s:DoPeriodicQuickFix()
                 \ . ' ' . b:clang_parameters . ' ' . b:clang_user_options . ' ' . g:clang_user_options
 
     let l:clang_output = split(system(l:command), "\n")
-    " call delete(l:tempfile)
+    call delete(l:tempfile)
     call s:ClangQuickFix(l:clang_output, l:tempfile)
 endfunction
 
@@ -343,7 +343,7 @@ function ClangComplete(findstart, base)
                     \ . line('.') . ':' . b:col . ' ' . l:escaped_tempfile
                     \ . ' ' . b:clang_parameters . ' ' . b:clang_user_options . ' ' . g:clang_user_options
         let l:clang_output = split(system(l:command), "\n")
-        " call delete(l:tempfile)
+        call delete(l:tempfile)
 
         call s:ClangQuickFix(l:clang_output, l:tempfile)
         if v:shell_error
