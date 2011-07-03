@@ -193,4 +193,8 @@ if has("gui_macvim")
   set fuoptions=maxvert,maxhorz
 endif
 
+" omni-completion
+imap <C-Space> <C-x><C-o>
+
+
 " vim: set sw=2 ts=2 ft=vim foldmethod=marker:
