@@ -187,7 +187,7 @@ set et
 autocmd BufRead *.make set ft=make
 autocmd Filetype make set noet
 autocmd Filetype automake set noet
-autocmd Filetype c,cpp set noet ts=8 sw=8
+autocmd Filetype c,cpp set noet ts=8 sw=8 tw=100
 autocmd Filetype asm set ts=8 sw=8
 
 " HTML
