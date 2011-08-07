@@ -20,7 +20,7 @@ endif
 " Cursorzeile anzeigen
 set nocursorline
 
-" Schriftart
+" Schriftart und Icons
 if has("gui_gtk2")
    " set guifontset=""
    " set guifont=Lucida\ Sans\ Typewriter\ 10
@@ -33,6 +33,7 @@ if has("gui_gtk2")
    " set guifont=Terminus\ 12
    " set guifont=Liberation\ Mono\ 10
    " set guifont=Inconsolata-g\ Medium\ 10
+   set toolbariconsize=medium
 endif
 if has("gui_win32")
   set guifont=SGIScreen:h11:cANSI
