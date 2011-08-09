@@ -134,7 +134,7 @@ if has("gui_macvim")
     colorscheme macvim
 else
     " set bg=dark
-    colorscheme macvim
+    colorscheme lucius
 endif
 
 " Keine Strings und Zahlen in C-Kommentaren
