@@ -18,7 +18,7 @@ else
 endif
 
 " Cursorzeile anzeigen
-set nocursorline
+set cursorline
 
 " Schriftart und Icons
 if has("gui_gtk2")
@@ -196,6 +196,5 @@ endif
 
 " omni-completion
 imap <C-Space> <C-x><C-o>
-
 
 " vim: set sw=2 ts=2 ft=vim foldmethod=marker:
