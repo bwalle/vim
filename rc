@@ -409,11 +409,14 @@ augroup filetypedetect
   autocmd BufRead kontact* set ft=mail nonumber tw=72
   autocmd BufRead kmail* set ft=mail nonumber tw=72
   autocmd BufRead,BufNewFile hg-editor-*.txt set ft=hgcommit
+  autocmd BufRead,BufNewFile *.gcov set ft=gcov
 augroup END
 
 " autocmd BufEnter,BufReadPost,BufRead,BufNewFile * if &diff | set nonumber |  endif
 
 au FileType cpp set sw=4 ts=4 et
+au FileType python set sw=4 ts=4 et
+au FileType sh set sw=4 ts=4 et
 if hostname() == 'agamemnon'
     let g:changelog_username="Bernhard Walle <walle@corscience.de>"
     iabbrev soff Signed-off-by: Bernhard Walle <walle@corscience.de>
