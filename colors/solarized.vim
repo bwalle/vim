@@ -146,7 +146,7 @@ let s:terms_noitalic=[
             \"Apple_Terminal"
             \]
 if has("gui_running")
-    let s:terminal_italic=1 " TODO: could refactor to not require this at all
+    let s:terminal_italic=0 " TODO: could refactor to not require this at all
 else
     let s:terminal_italic=0 " terminals will be guilty until proven compatible
     for term in s:terms_italic
