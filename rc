@@ -206,7 +206,7 @@ au BufNewFile,BufRead /etc/lighttpd/*.conf,lighttpd.conf set filetype=lighttpd
 "   Don't change the order, it's important that the line with * comes first.
 "autocmd FileType *           set formatoptions=tcql nocindent comments&
 autocmd FileType c,cpp,java  setlocal cindent 
-autocmd FileType c,cpp,java  setlocal cinoptions=(0,W1s,:0
+autocmd FileType c,cpp,java  setlocal cinoptions=(0,W1s,:0,N-s,g0
 
 autocmd FileType tex         set sw=2 ts=2 et
 
@@ -550,13 +550,35 @@ function! MyTabLabel(n)
     let winnr = tabpagewinnr(a:n)
     let bufname = bufname(buflist[winnr - 1])
     if filereadable(bufname)
-        return fnamemodify(bufname, ':p:t')
+        let displayname = fnamemodify(bufname, ':p:t')
     elseif strlen(bufname) == 0
-        return '[New]'
+        let displayname = '[New]'
     else
-        return bufname
+        let displayname = bufname
     endif
+
+    if strlen(displayname) > 17
+        let displayname = '...' . displayname[-20:]
+    endif
+
+    return displayname
 endfunction
 
+autocmd FileChangedShell * call <SID>FileChanged()
+
+function! s:FileChanged()
+    echohl WarningMsg
+
+    if v:fcs_reason == 'deleted'
+        let v:fcs_choice = 'ask'
+        echo 'File deleted!'
+    else
+        let v:fcs_choice = 'reload'
+        echo 'File changed!'
+    endif
+
+    echohl None
+endfunction
 
 " vim: set sw=4 ts=4 ft=vim foldmethod=marker:
+"
