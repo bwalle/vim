@@ -244,7 +244,7 @@ endif
 " ----------------- Konfiguration von Plugins ---------------------------- {{{
 
 " Make
-set makeprg=bmake
+set makeprg=bmake\ \\\|&\ vim_error_filter
 
 " Doxygen
 let g:load_doxygen_syntax = 0
@@ -579,6 +579,7 @@ function! s:FileChanged()
 
     echohl None
 endfunction
+
 
 " vim: set sw=4 ts=4 ft=vim foldmethod=marker:
 "
