@@ -84,7 +84,7 @@ set guioptions-=t " tearoff menus
 " use GUI tabs only on Mac
 if !has("gui_macvim")
   set guioptions-=e
-  set guioptions+=T " toolbar
+  set guioptions-=T " toolbar
 endif
 
 map <M-1> 1gt

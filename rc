@@ -580,6 +580,15 @@ function! s:FileChanged()
     echohl None
 endfunction
 
+function! QtClassDoc()
+    let qt_dir = "/usr/share/doc/qt/html/"
+    let class = tolower(expand("<cword>"))
+    silent execute "!exo-open --launch WebBrowser " . qt_dir . class . ".html &>/dev/null" . " &" | redraw!
+endfunction
+
+nnoremap <silent> <F4> :silent call QtClassDoc()<CR>
+inoremap <silent> <F4> <ESC>:silent call QtClassDoc()<CR>
+
 
 " vim: set sw=4 ts=4 ft=vim foldmethod=marker:
 "
