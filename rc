@@ -147,7 +147,7 @@ set noruler
 
 " dark background for xterm & Konsole
 let os = substitute(system('uname'), "\n", "", "")
-if os == "Linux"
+if os == "Linux" || os == "Darwin"
     set background=dark
 else
     set background=light
