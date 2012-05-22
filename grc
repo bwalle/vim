@@ -36,7 +36,7 @@ if has("gui_gtk2")
    set toolbariconsize=medium
 endif
 if has("gui_win32")
-  set guifont=SGIScreen:h11:cANSI
+  set guifont=Consolas:h11:cANSI
 endif
 if has("gui_macvim")
   set guifont=Menlo:h14
