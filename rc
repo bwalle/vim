@@ -387,8 +387,8 @@ map <F7> :mak!<CR>
 
 " changelog mapping
 map <buffer> <LocalLeader>l <Plug>SpecChangelog
-nnoremap <silent> <F12> :silent !xterm&<CR>
-inoremap <silent> <F12> <ESC>:silent !xterm&<CR>a
+nnoremap <silent> <F12> :silent !exo-open --launch TerminalEmulator&<CR>
+inoremap <silent> <F12> <ESC>:silent !exo-open --launch TerminalEmulator&<CR>a
 
 nmap <silent> <C-N> :silent noh<CR>
 "let g:qb_hotkey = "<F2>" 
@@ -417,10 +417,11 @@ augroup END
 au FileType cpp set sw=4 ts=4 et
 au FileType python set sw=4 ts=4 et
 au FileType sh set sw=4 ts=4 et
-if hostname() == 'agamemnon'
-    let g:changelog_username="Bernhard Walle <walle@corscience.de>"
-    iabbrev soff Signed-off-by: Bernhard Walle <walle@corscience.de>
-    iabbrev email Bernhard Walle <walle@corscience.de>
+if hostname() == 'thinkcentre'
+    let g:changelog_username="Bernhard Walle <bernhard.walle@ncp-e.com>"
+    iabbrev soff Signed-off-by: Bernhard Walle <bernhard.walle@ncp-e.com>
+    iabbrev email Bernhard Walle <bernhard.walle@ncp-e.com>
+    au FileType cpp set sw=4 ts=4 noet
 else
     let g:changelog_username="Bernhard Walle <bernhard@bwalle.de>"
     iabbrev soff Signed-off-by: Bernhard Walle <bernhard@bwalle.de>
@@ -585,9 +586,6 @@ function! QtClassDoc()
     let class = tolower(expand("<cword>"))
     silent execute "!exo-open --launch WebBrowser " . qt_dir . class . ".html &>/dev/null" . " &" | redraw!
 endfunction
-
-nnoremap <silent> <F4> :silent call QtClassDoc()<CR>
-inoremap <silent> <F4> <ESC>:silent call QtClassDoc()<CR>
 
 
 " vim: set sw=4 ts=4 ft=vim foldmethod=marker:
