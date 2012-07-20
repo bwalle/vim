@@ -79,11 +79,12 @@ if &background == "dark"
   hi Cursor       guibg=LightGoldenrod guifg=bg
   hi CursorColumn guibg=Gray20
   hi CursorIM     guibg=LightSlateGrey guifg=bg
-  hi CursorLine   guibg=Gray20
+  hi CursorLine   guibg=NONE
   hi DiffChange   guibg=MediumPurple4
   hi DiffDelete   gui=bold guifg=White guibg=SlateBlue
   hi DiffText     gui=NONE guifg=White guibg=SteelBlue
   hi LineNr       guifg=#552A7B guibg=Grey10
+  hi CursorLineNr guifg=Grey60 gui=NONE
   hi MatchParen   guifg=White guibg=Magenta
   hi Normal       guifg=Grey50 guibg=Grey5
   hi Search       guibg=Grey20 guifg=NONE
