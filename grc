@@ -84,7 +84,7 @@ set guioptions-=t " tearoff menus
 " use GUI tabs only on Mac
 if !has("gui_macvim")
   set guioptions-=e
-  set guioptions-=T " toolbar
+"  set guioptions-=T " toolbar
 endif
 
 map <M-1> 1gt
@@ -132,10 +132,10 @@ imap <D-9> <ESC>9gta
 if has("gui_macvim")
     let g:solarized_italic=1
 else
-    let g:solarized_italic=0
+    let g:solarized_italic=1
 endif
 set bg=dark
-colorscheme solarized
+colorscheme macvim
 
 " Keine Strings und Zahlen in C-Kommentaren
 if exists("c_comment_strings")
