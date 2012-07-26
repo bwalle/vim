@@ -93,7 +93,7 @@ if &background == "dark"
   hi Type         gui=bold guifg=Cyan4 guibg=NONE
   hi WildMenu     guibg=SkyBlue guifg=White
   hi lCursor      guibg=LightSlateGrey guifg=bg
-  hi ColorColumn      guifg=NONE              guibg=#111111           gui=none
+  hi ColorColumn      guifg=NONE              guibg=#222222           gui=none
   hi ColorColumn      ctermfg=NONE            ctermbg=94              cterm=none
 else
   hi doxygenBrief                  gui=NONE guifg=#4a708b   guibg=NONE gui=bold
