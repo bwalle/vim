@@ -348,7 +348,7 @@ end
 module VIM
 
   unless const_defined? "MOST_POSITIVE_INTEGER"
-    MOST_POSITIVE_INTEGER = 2**(32 - 1) - 2  # Vim ints are signed 32-bit.
+    MOST_POSITIVE_INTEGER = 2**(16 - 1) - 2  # Vim ints are signed 32-bit.
   end
 
   def self.zero?(var)
