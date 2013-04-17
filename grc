@@ -27,7 +27,7 @@ if has("gui_gtk2")
    " set guifont=Droid\ Sans\ Mono\ 10
    " set guifont=Inconsolata\ 12
    " set guifont=Fixed\ 11
-   set guifont=DejaVu\ Sans\ Mono\ 9.6
+   set guifont=DejaVu\ Sans\ Mono\ 10.8
    " set guifont=Inconsolata\ 12
    " set guifont=Fixed\ 11
    " set guifont=Terminus\ 12
@@ -135,7 +135,8 @@ else
     let g:solarized_italic=1
 endif
 set bg=dark
-colorscheme macvim
+colorscheme aldmeris
+":LuciusDarkDim
 
 " Keine Strings und Zahlen in C-Kommentaren
 if exists("c_comment_strings")
