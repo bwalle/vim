@@ -386,6 +386,9 @@ imap <F3> <esc>:lan tim en_US<CR>a<C-R>=strftime("%a %b %e %H:%M:%S %Z %Y")<CR><
 autocmd FileType svn    map <F9> :new<CR>:read !svn diff<CR>:set syntax=diff buftype=nofile<CR>gg 
 map <F7> :mak!<CR>
 
+map <F6> :!!<CR>
+imap <F6> <ESC>:!!<CR>i 
+
 " changelog mapping
 map <buffer> <LocalLeader>l <Plug>SpecChangelog
 nnoremap <silent> <F12> :silent !exo-open --launch TerminalEmulator&<CR>
@@ -446,6 +449,7 @@ au BufRead,BufNewFile *bugzilla* setlocal filetype=mail nonumber
 
 au BufRead,BufNewFile *.bb set filetype=sh
 
+set number
 au FileType mail set nonumber
 
 "                                                                          }}}
