@@ -1,7 +1,7 @@
 " ============================================================================
 " Name:     Lucius vim color scheme
 " Author:   Jonathan Filip <jfilip1024@gmail.com>
-" Version:  8.1.0
+" Version:  8.1.2
 " ----------------------------------------------------------------------------
 "
 " Light and dark color scheme for GUI and 256 color terminal.
@@ -22,6 +22,12 @@
 " adding more as I go along. You can find the files for these on Github:
 "
 " https://github.com/jonathanfilip/lucius
+"
+" You can also clone the following repository if you use Pathogen or something
+" similar. It holds the vim color scheme in a 'colors' directory:
+"
+" https://github.com/jonathanfilip/vim-lucius
+"
 "
 "
 " Presets:
@@ -90,19 +96,17 @@
 " Options:
 " ============================================================================
 
+unlet! g:colors_name
 hi clear
 if exists("syntax_on")
     syntax reset
 endif
-let colors_name="lucius"
 
 if exists("g:lucius_style")
     let s:style = g:lucius_style
 else
     let s:style = &background
 endif
-
-exec "set background=" . s:style
 
 if exists("g:lucius_contrast")
     let s:contrast = g:lucius_contrast
@@ -226,7 +230,6 @@ endfunction
 " ============================================================================
 
 let s:normal_items = [
-            \ "Normal",
             \ "ColorColumn", "Comment", "Constant", "Cursor", "CursorColumn",
             \ "CursorIM", "CursorLine", "CursorLineNr", "DiffAdd", "DiffChange",
             \ "DiffDelete", "Directory", "Error", "ErrorMsg", "Identifier",
@@ -251,20 +254,17 @@ let s:undercurl_items = [
             \ "SpellBad", "SpellCap", "SpellLocal", "SpellRare"
             \ ]
 
-" Clear default settings
-for item in s:normal_items + s:bold_items + s:underline_items + s:undercurl_items
-    exec "hi " . item . " guifg=NONE guibg=NONE gui=none"
-                \ . " ctermfg=NONE ctermbg=NONE cterm=none term=none"
-endfor
-
 
 " ============================================================================
 " Color Definitions:
 " ============================================================================
 
 " ----------------------------------------------------------------------------
-" Default Foreground:
+" 'Normal' Colors:
 " ----------------------------------------------------------------------------
+
+hi clear Normal
+hi Normal gui=none cterm=none term=none
 
 if s:style == "light"
     if s:contrast == "high"
@@ -284,11 +284,6 @@ else
     endif
 endif
 
-
-" ----------------------------------------------------------------------------
-" Default Background:
-" ----------------------------------------------------------------------------
-
 if s:style == "light"
     if s:contrast_bg == "high"
         hi Normal                       guibg=#ffffff
@@ -302,6 +297,23 @@ else
         hi Normal                       guibg=#303030
     endif
 endif
+
+call s:AddCterm("Normal")
+
+
+" ----------------------------------------------------------------------------
+" Extra setup
+" ----------------------------------------------------------------------------
+
+exec "set background=" . s:style
+
+" Clear default settings
+for s:item in s:normal_items + s:bold_items + s:underline_items + s:undercurl_items
+    exec "hi " . s:item . " guifg=NONE guibg=NONE gui=none"
+                \ . " ctermfg=NONE ctermbg=NONE cterm=none term=none"
+endfor
+
+let g:colors_name="lucius"
 
 
 " ----------------------------------------------------------------------------
@@ -633,27 +645,23 @@ hi Underlined   guifg=fg
 " Text Emphasis:
 " ============================================================================
 
-for item in s:normal_items
-    exec "hi " . item . " gui=none cterm=none term=none"
-endfor
-
 if s:use_bold == 1
-    for item in s:bold_items
-        exec "hi " . item . " gui=bold cterm=bold term=none"
+    for s:item in s:bold_items
+        exec "hi " . s:item . " gui=bold cterm=bold term=none"
     endfor
 endif
 
 if s:use_underline == 1
-    for item in s:underline_items
-        exec "hi " . item . " gui=underline cterm=underline term=none"
+    for s:item in s:underline_items
+        exec "hi " . s:item . " gui=underline cterm=underline term=none"
     endfor
-    for item in s:undercurl_items
-        exec "hi " . item . " cterm=underline"
+    for s:item in s:undercurl_items
+        exec "hi " . s:item . " cterm=underline"
     endfor
 endif
 
-for item in s:undercurl_items
-    exec "hi " . item . " gui=undercurl term=none"
+for s:item in s:undercurl_items
+    exec "hi " . s:item . " gui=undercurl term=none"
 endfor
 
 
@@ -661,14 +669,12 @@ endfor
 " Cterm Colors:
 " ============================================================================
 
-call s:AddCterm("Normal")
-
-for item in s:normal_items + s:bold_items + s:underline_items
-    call s:AddCterm(item)
+for s:item in s:normal_items + s:bold_items + s:underline_items
+    call s:AddCterm(s:item)
 endfor
 
-for item in s:undercurl_items
-    call s:AddSpCterm(item)
+for s:item in s:undercurl_items
+    call s:AddSpCterm(s:item)
 endfor
 
 
@@ -679,12 +685,12 @@ endfor
 let s:alternative_bold_items = ["Identifier", "PreProc", "Statement",
             \ "Special", "Constant", "Type"]
 
-for item in s:alternative_bold_items
-    exec "let s:temp_gui_fg = synIDattr(synIDtrans(hlID('" . item .
+for s:item in s:alternative_bold_items
+    exec "let s:temp_gui_fg = synIDattr(synIDtrans(hlID('" . s:item .
                 \ "')), 'fg', 'gui')"
-    exec "let s:temp_cterm_fg = synIDattr(synIDtrans(hlID('" . item .
+    exec "let s:temp_cterm_fg = synIDattr(synIDtrans(hlID('" . s:item .
                 \ "')), 'fg', 'cterm')"
-    exec "hi B" . item . " guifg=" . s:temp_gui_fg . " ctermfg=" .
+    exec "hi B" . s:item . " guifg=" . s:temp_gui_fg . " ctermfg=" .
                 \ s:temp_cterm_fg . " gui=bold cterm=bold term=none"
 endfor
 
