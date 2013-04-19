@@ -135,8 +135,8 @@ else
     let g:solarized_italic=1
 endif
 set bg=dark
-colorscheme aldmeris
-":LuciusDarkDim
+colorscheme lucius
+LuciusBlackLowContrast
 
 " Keine Strings und Zahlen in C-Kommentaren
 if exists("c_comment_strings")
