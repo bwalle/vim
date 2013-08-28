@@ -447,6 +447,7 @@ au BufRead,BufNewFile *newton*.txt setlocal filetype=moin
     \ nonumber spelllang=de_de spell tw=0
 au BufRead,BufNewFile *bwalle.de* setlocal filetype=dokuwiki nonumber
 au BufRead,BufNewFile *bugzilla* setlocal filetype=mail nonumber
+au BufRead,BufNewFile *edit-server* setlocal filetype=dokuwiki nonumber
 
 au BufRead,BufNewFile *.bb set filetype=sh
 
