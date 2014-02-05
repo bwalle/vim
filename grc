@@ -123,15 +123,15 @@ imap <D-8> <ESC>8gta
 imap <D-9> <ESC>9gta
 
 " Farbschema
-" set bg=dark
+set bg=dark
 if has("gui_macvim")
     let g:solarized_italic=1
+    colorscheme macvim
 else
     let g:solarized_italic=1
+    colorscheme monokai
 endif
-set bg=dark
-colorscheme lucius
-LuciusBlackLowContrast
+"LuciusBlackLowContrast
 
 " Keine Strings und Zahlen in C-Kommentaren
 if exists("c_comment_strings")
