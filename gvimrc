@@ -77,6 +77,7 @@ set guioptions-=L
 set guioptions-=g
 set guioptions+=m " menu bar
 set guioptions-=t " tearoff menus
+set guioptions-=T " toolbar
 "if !has("gui_macvim")
 "  set guioptions+=c " console dialogs
 "endif
