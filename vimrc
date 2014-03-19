@@ -244,6 +244,12 @@ endif
 "                                                                          }}}
 " ----------------- Konfiguration von Plugins ---------------------------- {{{
 
+" alternate
+let g:alternateExtensions_hxx = "cxx,inl"
+let g:alternateExtensions_cxx = "hxx,inl"
+let g:alternateSearchPath = "sfr:../source,sfr:../src,sfr:../include,sfr:../inc,reg:/include/src/g,reg:/src/include/g"
+let g:alternateNoDefaultAlternate = 1
+
 " Make
 set makeprg=bmake\ \\\|&\ vim_error_filter
 
@@ -595,7 +601,6 @@ function! QtClassDoc()
     let class = tolower(expand("<cword>"))
     silent execute "!exo-open --launch WebBrowser " . qt_dir . class . ".html &>/dev/null" . " &" | redraw!
 endfunction
-
 
 " vim: set sw=4 ts=4 ft=vim foldmethod=marker:
 "
