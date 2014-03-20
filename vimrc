@@ -602,5 +602,15 @@ function! QtClassDoc()
     silent execute "!exo-open --launch WebBrowser " . qt_dir . class . ".html &>/dev/null" . " &" | redraw!
 endfunction
 
+function! s:insert_gates()
+  let gatename = substitute(toupper(expand("%:t")), "\\.", "_", "g") . "_"
+  execute "normal! i#ifndef " . gatename
+  execute "normal! o#define " . gatename . " "
+  execute "normal! Go#endif /* " . gatename . " */"
+  normal! ko
+endfunction
+command! IncGuard :call s:insert_gates()
+
+
 " vim: set sw=4 ts=4 ft=vim foldmethod=marker:
 "
