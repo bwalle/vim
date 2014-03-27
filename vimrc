@@ -603,7 +603,7 @@ function! QtClassDoc()
 endfunction
 
 function! s:insert_gates()
-  let gatename = substitute(toupper(expand("%:t")), "\\.", "_", "g") . "_"
+  let gatename = substitute(toupper(expand("%:t")), "[^a-zA-Z0-9]", "_", "g") . "_"
   execute "normal! i#ifndef " . gatename
   execute "normal! o#define " . gatename . " "
   execute "normal! Go#endif /* " . gatename . " */"
@@ -611,6 +611,13 @@ function! s:insert_gates()
 endfunction
 command! IncGuard :call s:insert_gates()
 
+" Opens an http URL on the current editor line in our favorite web browser
+function OpenURL()
+  let line = getline (".")
+  let line = matchstr (line, "http://[^ ,;\t]*")
+  exec "!/usr/bin/chromium ".line."&"
+endfunction
+map <F11> <Esc>:call OpenURL()<CR>
 
 " vim: set sw=4 ts=4 ft=vim foldmethod=marker:
 "
