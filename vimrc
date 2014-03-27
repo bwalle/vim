@@ -619,5 +619,7 @@ function OpenURL()
 endfunction
 map <F11> <Esc>:call OpenURL()<CR>
 
+command! NcpCppHeader :0r $VIMDIR/ncp_cpp_header
+
 " vim: set sw=4 ts=4 ft=vim foldmethod=marker:
 "
