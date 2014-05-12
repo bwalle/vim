@@ -524,7 +524,6 @@ au FileType moin iabbrev toc <<TableOfContents(2)>>
 au FileType moin iabbrev pre {{{<CR>}}}<Up>
 au FileType moin iabbrev footnote <<FootNote()>><Left><Left><Left>
 
-autocmd FileType c,cpp  iabbrev --- // -------------------------------------------------------------------------------------------------
 autocmd FileType c,cpp setlocal fdm=marker
 autocmd FileType c,cpp iabbrev begin_c #ifdef __cplusplus<CR>extern "C" {<CR>#endif<CR><C-d>
 autocmd FileType c,cpp iabbrev end_c #ifdef __cplusplus<CR>}<CR>#endif<CR><C-d>
