@@ -429,7 +429,7 @@ augroup END
 au FileType cpp set sw=4 ts=4 et
 au FileType python set sw=4 ts=4 et
 au FileType sh set sw=4 ts=4 et
-if hostname() == 'thinkcentre'
+if filereadable(expand($VIMDIR . "/work"))
     let g:changelog_username="Bernhard Walle <bernhard.walle@ncp-e.com>"
     iabbrev soff Signed-off-by: Bernhard Walle <bernhard.walle@ncp-e.com>
     iabbrev email Bernhard Walle <bernhard.walle@ncp-e.com>
