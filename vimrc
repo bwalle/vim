@@ -145,13 +145,8 @@ set history=1000
 " show the cursor position all the time
 set noruler
 
-" dark background for xterm & Konsole
-let os = substitute(system('uname'), "\n", "", "")
-if os == "Linux" || os == "Darwin"
-    set background=dark
-else
-    set background=light
-endif
+" dark background
+set background=dark
 
 " save the swapfile /tmp instead of the current directory (makes vim more
 " responsive when using on slow directories such as NFS or even sshfs)
