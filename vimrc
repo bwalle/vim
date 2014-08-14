@@ -216,13 +216,13 @@ endif
 set complete=.,w,b,u
 
 " show trailing EOL
-if version >= 700 && $OS != "Windows_NT"
-  " When vim used as vimpager, then vim is called with LANG=en_US and has
-  " problems to use that UTF-8 character. Therefore, we don't use listchars
-  " in that case because we don't need it anyway.
-  if $LANG != "en_US"
-    set listchars=tab:»-,trail:\ ,eol:.,nbsp:_
-  endif
+" When vim used as vimpager, then vim is called with LANG=en_US and has
+" problems to use that UTF-8 character. Therefore, we don't use listchars
+" in that case because we don't need it anyway.
+if version >= 700 && $OS != "Windows_NT" && $LANG != "en_US"
+  set listchars=tab:»-,trail:\ ,eol:.,nbsp:_
+else
+  set listchars=tab:>-,trail:\ ,eol:.,nbsp:_
 endif
 
 "                                                                          }}}
