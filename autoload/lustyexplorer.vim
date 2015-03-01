@@ -887,7 +887,7 @@ class FilesystemExplorer < Explorer
       if path.empty?
         path = VIM::getcwd()
       end
-      if path.respond_to?(:force_encoding)
+      if path.respond_to?(:force_encoding) && RUBY_PLATFORM !~ /mingw/
         path = path.force_encoding(VIM::evaluate('&enc'))
       end
       @prompt.set!(path + File::SEPARATOR)
