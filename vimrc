@@ -270,6 +270,9 @@ let perl_include_pod = 1
 let perl_fold = 1
 let perl_nofold_packages = 0
 
+" silver searcher
+let g:ackprg = 'ag --vimgrep'
+
 " Changelog (RPM spec)
 au FileType spec map <buffer> <Leader>o <Plug>SpecChangelog
 au FileType spec lan time POSIX
