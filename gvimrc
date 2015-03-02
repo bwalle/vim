@@ -52,7 +52,11 @@ set t_vb=""
 set hlsearch
 
 " break
-set showbreak=»\ 
+if $OS != "Windows_NT" && $LANG != "en_US"
+  set showbreak=»\ 
+else
+  set showbreak=>\ 
+endif
 
 " show line numbers
 if &diff
