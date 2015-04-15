@@ -38,6 +38,8 @@ syn match ncphelpStatement  /\.DESC/
 syn match ncphelpStatement  /\.SAMPLE/
 syn match ncphelpStatement  /\.RETURN/
 syn match ncphelpStatement  /\.SEEALSO/
+syn match ncphelpStatement  /\.PARENTFILENAME/
+syn match ncphelpStatement  /\.GENERAL1/
 
 syn region ncphelpComment   start="#" end="$"
 
