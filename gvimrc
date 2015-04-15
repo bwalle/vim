@@ -27,12 +27,13 @@ if has("gui_gtk2")
    " set guifont=Droid\ Sans\ Mono\ 10
    " set guifont=Inconsolata\ 12
    " set guifont=Fixed\ 11
-   set guifont=DejaVu\ Sans\ Mono\ 10.8
+   " set guifont=DejaVu\ Sans\ Mono\ 10.8
    " set guifont=Inconsolata\ 12
    " set guifont=Fixed\ 11
    " set guifont=Terminus\ 12
    " set guifont=Liberation\ Mono\ 10
    " set guifont=Inconsolata-g\ Medium\ 10
+   set guifont=Source\ Code\ Pro\ 10
    set toolbariconsize=medium
 endif
 if has("gui_win32")
