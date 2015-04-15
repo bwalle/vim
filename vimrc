@@ -472,10 +472,15 @@ command SvnDiffNext :call Svndiff("next")
 command SvnDiffClear :call Svndiff("clear")
 
 
+fun! CopyToBothClipboards(expression)
+    let @* = expand(a:expression)
+    let @+ = expand(a:expression)
+endfun
+
 " copy the name of the current file to the clipboard
-command! Cpp let @* = expand("%:p")
-command! Cpf let @* = expand("%:t")
-command! Cpd let @* = expand("%:p:h")
+command! Cpp call CopyToBothClipboards("%:p")
+command! Cpf call CopyToBothClipboards("%:t")
+command! Cpd call CopyToBothClipboards("%:p:h")
 
 " Arch
 command! Amd5 :r! makepkg -g 2>/dev/null
