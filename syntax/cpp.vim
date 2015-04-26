@@ -23,7 +23,7 @@ endif
 " C++ extensions
 syn keyword cppStatement	new delete this friend using
 syn keyword cppAccess		public protected private
-syn keyword cppType		inline virtual explicit export bool wchar_t
+syn keyword cppType		inline virtual explicit export bool BOOL wchar_t
 syn keyword cppExceptions	ncp_throw throw try catch
 syn keyword cppOperator		operator typeid
 syn keyword cppOperator		and bitor or xor compl bitand and_eq or_eq xor_eq not not_eq
@@ -31,7 +31,7 @@ syn match cppCast		"\<\(const\|static\|dynamic\|reinterpret\)_cast\s*<"me=e-1
 syn match cppCast		"\<\(const\|static\|dynamic\|reinterpret\)_cast\s*$"
 syn keyword cppStorageClass	mutable
 syn keyword cppStructure	class typename template namespace
-syn keyword cppBoolean		true false
+syn keyword cppBoolean		true false TRUE FALSE
 syn keyword cppConstant		__cplusplus
 
 " C++ 11 extensions

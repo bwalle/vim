@@ -258,6 +258,9 @@ endif
 if exists("c_gnu")
   syn keyword	cType		__label__ __complex__ __volatile__
 endif
+if !exists("c_no_win32")
+  syn keyword	cType		DWORD WORD CHAR CPCHAR BYTE
+endif
 
 syn keyword	cStructure	struct union enum typedef
 syn keyword	cStorageClass	static register auto volatile extern const
