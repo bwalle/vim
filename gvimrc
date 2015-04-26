@@ -40,8 +40,8 @@ if has("gui_win32")
   set guifont=Consolas:h11:cANSI
 endif
 if has("gui_macvim")
-  set guifont=Menlo:h14
-  set linespace=0
+  set guifont=Source\ Code\ Pro:h15
+  set linespace=-1
 	set transp=0
 endif
 
