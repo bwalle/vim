@@ -486,7 +486,7 @@ command! Cpd call CopyToBothClipboards("%:p:h")
 command! Amd5 :r! makepkg -g 2>/dev/null
 
 command! GnuIndent set cinoptions={.5s,:.5s,+.5s,t0,g0,^-2,e-2,n-2,p2s,(0,=.5s formatoptions=croql cindent sw=4 ts=8 noet
-command! KernelIndent setlocal cinoptions=:0,l1,t0,g0 sw=8 ts=8 noet
+command! KernelIndent setlocal cinoptions=:0,l1,t0,g0 sw=8 ts=8 sts=0 noet
 
 
 
