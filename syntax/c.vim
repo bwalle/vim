@@ -259,7 +259,7 @@ if exists("c_gnu")
   syn keyword	cType		__label__ __complex__ __volatile__
 endif
 if !exists("c_no_win32")
-  syn keyword	cType		DWORD WORD CHAR CPCHAR BYTE
+  syn keyword	cType		DWORD WORD CHAR PCHAR CPCHAR BYTE PBYTE CPBYTE PDWORD
 endif
 
 syn keyword	cStructure	struct union enum typedef
