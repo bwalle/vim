@@ -139,7 +139,7 @@ syn keyword ncppolicyFunction       Exec
 syn keyword ncppolicyFunction       WmiQuerySimpleInt
 syn keyword ncppolicyFunction       WmiQuerySimpleStr
 syn keyword ncppolicyFunction       WmiStartQuery
-syn keyword ncppolicyFunction       WmiHasNext
+syn keyword ncppolicyFunction       WmiNext
 syn keyword ncppolicyFunction       WmiGetValueStr
 syn keyword ncppolicyFunction       WmiGetValueInt
 syn keyword ncppolicyFunction       WmiGetValueName
