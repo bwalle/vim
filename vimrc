@@ -424,16 +424,12 @@ augroup END
 
 " autocmd BufEnter,BufReadPost,BufRead,BufNewFile * if &diff | set nonumber |  endif
 
-au FileType cpp set sw=4 ts=4 et
-au FileType python set sw=4 ts=4 et
 au FileType sh set sw=4 ts=4 et
 if filereadable(expand($VIMDIR . "/work"))
     let g:changelog_username="Bernhard Walle <bernhard.walle@ncp-e.com>"
     iabbrev soff Signed-off-by: Bernhard Walle <bernhard.walle@ncp-e.com>
     iabbrev email Bernhard Walle <bernhard.walle@ncp-e.com>
     " my colleague likes tabs, well, I don't...
-    au FileType cpp set sw=4 ts=4 noet
-    au FileType python set sw=4 ts=4 noet
 else
     let g:changelog_username="Bernhard Walle <bernhard@bwalle.de>"
     iabbrev soff Signed-off-by: Bernhard Walle <bernhard@bwalle.de>
