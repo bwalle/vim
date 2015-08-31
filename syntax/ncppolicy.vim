@@ -169,6 +169,8 @@ syn keyword ncppolicyConstant       MAC_HW_MODEL
 syn keyword ncppolicyConstant       WAS_ACCEPTED
 syn keyword ncppolicyConstant       ISFIRSTCHECK
 syn keyword ncppolicyConstant       OSVERSION
+syn keyword ncppolicyConstant       OS_VERSION
+syn keyword ncppolicyConstant       OS_KERNEL_VERSION
 syn keyword ncppolicyConstant       OSUSERNAME
 syn keyword ncppolicyConstant       ISWINDOWS
 syn keyword ncppolicyConstant       ISWINCE
@@ -186,6 +188,7 @@ syn keyword ncppolicyConstant       ISWINDOWSVISTA
 syn keyword ncppolicyConstant       ISWINDOWS7
 syn keyword ncppolicyConstant       ISWINDOWS8
 syn keyword ncppolicyConstant       ISWINDOWS81
+syn keyword ncppolicyConstant       ISWINDOWS10
 syn keyword ncppolicyConstant       IS64BIT
 syn keyword ncppolicyConstant       ISMACOSX
 syn keyword ncppolicyConstant       LINUX_DIST
@@ -200,8 +203,8 @@ syn keyword ncppolicyConstant       SECURECLIENT_SPNR
 syn keyword ncppolicyConstant       SECURECLIENT_BUILDNR
 syn keyword ncppolicyConstant       VPNUSERNAME
 syn keyword ncppolicyConstant       SECURECLIENT_CFGVERSION
-syn keyword ncppolicyConstant       SECURECLIENT_ISLINKFWACTIV
-syn keyword ncppolicyConstant       SECURECLIENT_ISFWACTIV
+syn keyword ncppolicyConstant       SECURECLIENT_ISLINKFWACTIV SECURECLIENT_ISLINKFWACTIVE
+syn keyword ncppolicyConstant       SECURECLIENT_ISFWACTIV SECURECLIENT_ISFWACTIVE
 syn keyword ncppolicyConstant       SECURECLIENT_LINKTYPE
 syn keyword ncppolicyConstant       VIRUSSW_DISPLAYNAME
 syn keyword ncppolicyConstant       VIRUSSW_UPTODATE

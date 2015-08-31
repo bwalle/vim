@@ -619,7 +619,11 @@ function OpenURL()
 endfunction
 map <F11> <Esc>:call OpenURL()<CR>
 
+" iTerm: set the cursor shape like in gvim
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+
 command! NcpCppHeader :0r $VIMDIR/ncp_cpp_header
 
 " vim: set sw=4 ts=4 ft=vim foldmethod=marker:
-"
