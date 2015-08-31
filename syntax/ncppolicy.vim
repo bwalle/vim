@@ -30,8 +30,8 @@ syn keyword ncppolicyStatement  FOR for For to TO To next NEXT Next
 syn keyword ncppolicyStatement  INCLUSIVE inclusive Inclusive EXCLUSIVE exclusive Exclusive
 syn keyword ncppolicyStatement  EXIT exit Exit
 syn keyword ncppolicyStatement  PRINT print Print
-syn keyword ncppolicyStatement  #IFVER
-syn keyword ncppolicyStatement  #ENDVER
+syn keyword ncppolicyStatement  #IFVER #ifver
+syn keyword ncppolicyStatement  #ENDVER #endver
 
 syn keyword ncppolicyStatement  CIRCLE circle Circle CLEAR clear Clear
 syn keyword ncppolicyStatement  CLOSE close Close CLS cls Cls COLOR color Color
