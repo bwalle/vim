@@ -621,9 +621,11 @@ map <F11> <Esc>:call OpenURL()<CR>
 
 " iTerm: set the cursor shape like in gvim
 if !has("gui_running")
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-  let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+    if (v:version == 704 && has('patch687')) || v:version > 704
+        let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+    endif
 endif
 
 command! NcpCppHeader :0r $VIMDIR/ncp_cpp_header
