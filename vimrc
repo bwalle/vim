@@ -619,13 +619,24 @@ function OpenURL()
 endfunction
 map <F11> <Esc>:call OpenURL()<CR>
 
-" iTerm: set the cursor shape like in gvim
-if !has("gui_running")
+" set the cursor shape like in gvim
+if !has("gui_running") && has("unix")
+  let s:uname = system("uname")
+  if s:uname == "Darwin" || s:uname == "Darwin\n"
+    " iTerm
     let &t_SI = "\<Esc>]50;CursorShape=1\x7"
     let &t_EI = "\<Esc>]50;CursorShape=0\x7"
     if (v:version == 704 && has('patch687')) || v:version > 704
-        let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+      let &t_SR = "\<Esc>]50;CursorShape=2\x7"
     endif
+  else
+    " VTE
+    let &t_SI = "\<Esc>[6 q"
+    let &t_SR = "\<Esc>[4 q"
+    if (v:version == 704 && has('patch687')) || v:version > 704
+      let &t_EI = "\<Esc>[2 q"
+    endif
+  endif
 endif
 
 command! NcpCppHeader :0r $VIMDIR/ncp_cpp_header
