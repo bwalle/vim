@@ -452,6 +452,7 @@ au BufRead,BufNewFile *bwalle.de* setlocal filetype=dokuwiki nonumber
 au BufRead,BufNewFile *bugzilla* setlocal filetype=mail nonumber
 au BufRead,BufNewFile *edit-server* setlocal filetype=dokuwiki nonumber
 au BufRead,BufNewFile *intraweb.ncp.de* setlocal filetype=dokuwiki nonumber spelllang=de_de
+au BufRead,BufNewFile *redmine* setlocal filetype=redminewiki nonumber spelllang=de_de
 
 au BufRead,BufNewFile *.bb set filetype=sh
 
