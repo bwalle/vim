@@ -415,6 +415,7 @@ augroup filetypedetect
   autocmd BufNew,BufRead *.dsl set ft=asl
   autocmd BufRead *bugzilla.novell.com* set ft=mail
   autocmd BufRead SConstruct set ft=python
+  autocmd BufRead *.adoc set ft=asciidoc
   autocmd BufRead *tmpmsg* set ft=mail nonumber
   autocmd BufRead kontact* set ft=mail nonumber tw=72
   autocmd BufRead kmail* set ft=mail nonumber tw=72
