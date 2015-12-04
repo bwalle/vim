@@ -423,6 +423,7 @@ augroup filetypedetect
   autocmd BufRead,BufNewFile *.gcov set ft=gcov
 augroup END
 
+
 " autocmd BufEnter,BufReadPost,BufRead,BufNewFile * if &diff | set nonumber |  endif
 
 au FileType sh set sw=4 ts=4 et
@@ -431,11 +432,24 @@ if filereadable(expand($VIMDIR . "/work"))
     iabbrev soff Signed-off-by: Bernhard Walle <bernhard.walle@ncp-e.com>
     iabbrev email Bernhard Walle <bernhard.walle@ncp-e.com>
     " my colleague likes tabs, well, I don't...
+    autocmd FileType python set noet
+
+    function! SetupPython()
+        " Here, you can have the final say on what is set.  So
+        " fixup any settings you don't like.
+    endfunction
 else
     let g:changelog_username="Bernhard Walle <bernhard@bwalle.de>"
     iabbrev soff Signed-off-by: Bernhard Walle <bernhard@bwalle.de>
     iabbrev email Bernhard Walle <bernhard@bwalle.de>
+
+    function! SetupPython()
+        " Here, you can have the final say on what is set.  So
+        " fixup any settings you don't like.
+        setlocal noet
+    endfunction
 endif
+command! -bar SetupPython call SetupPython()
 let g:changes_mail="bernhard@bwalle.de"
 au FileType changes set tw=67
 au FileType changelog set ts=8
