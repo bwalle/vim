@@ -40,9 +40,10 @@ if has("gui_win32")
   set guifont=Consolas:h11:cANSI
 endif
 if has("gui_macvim")
-  set guifont=Source\ Code\ Pro:h14
-  set linespace=-1
-	set transp=0
+  set guifont=Source\ Code\ Pro:h13
+  "set linespace=-1
+	set transp=5
+	set blurradius=10
 endif
 
 " Virtueller Piep faktisch deaktivieren
@@ -133,6 +134,7 @@ set bg=dark
 if has("gui_macvim")
     let g:solarized_italic=1
     colorscheme macvim
+    hi Normal  guibg=black
 else
     let g:solarized_italic=1
     colorscheme monokai
