@@ -455,6 +455,7 @@ au FileType changes set tw=67
 au FileType changelog set ts=8
 
 iabbrev qheader From: <CR>Subject: <Up>
+iabbrev redmine Redmine-ID: 
 
 au BufRead,BufNewFile *.wiki set filetype=Wikipedia nonumber
 au BufRead,BufNewFile *wiki01.iis.fhg.de* setlocal filetype=moin
