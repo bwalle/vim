@@ -242,6 +242,9 @@ endif
 " alternate
 let g:alternateExtensions_hxx = "cxx,inl"
 let g:alternateExtensions_cxx = "hxx,h,inl"
+let g:alternateExtensions_h = "c,cpp,cxx,cc,CC,mm,m"
+let g:alternateExtensions_mm = "h"
+let g:alternateExtensions_m = "h"
 let g:alternateSearchPath = "sfr:../source,sfr:../src,sfr:../include,sfr:../inc,reg:/include/src/g,reg:/src/include/g"
 let g:alternateNoDefaultAlternate = 1
 
