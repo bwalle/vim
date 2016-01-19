@@ -438,6 +438,7 @@ if filereadable(expand($VIMDIR . "/work"))
         " Here, you can have the final say on what is set.  So
         " fixup any settings you don't like.
     endfunction
+    au FileType javascript set sw=4 ts=4 noet
 else
     let g:changelog_username="Bernhard Walle <bernhard@bwalle.de>"
     iabbrev soff Signed-off-by: Bernhard Walle <bernhard@bwalle.de>
