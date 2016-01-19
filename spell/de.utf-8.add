@@ -2074,3 +2074,7 @@ Betriebssystemkomponenten
 Schreibrecht
 Netzwerkzugriff
 Kernelimages
+Implementierungsdateien
+Headerdatei
+Typedefs
+RAII
