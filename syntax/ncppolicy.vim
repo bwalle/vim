@@ -147,6 +147,7 @@ syn keyword ncppolicyFunction       WmiGetValueCount
 syn keyword ncppolicyFunction       WmiFinishQuery
 syn keyword ncppolicyFunction       GetNacValue
 syn keyword ncppolicyFunction       SetNacPluginPath
+syn keyword ncppolicyFunction       SetSnmpUserData
 
 syn keyword ncppolicyLangConst      FALSE TRUE true false
 
@@ -252,6 +253,7 @@ syn keyword ncppolicyConstant       WSC_USER_ACCOUNT_CONTROL
 syn keyword ncppolicyConstant       WSC_SERVICE
 syn keyword ncppolicyConstant       PROGRAMMDIR
 syn keyword ncppolicyConstant       WINDOWSUSERNAME
+syn keyword ncppolicyConstant       MACADDRESS_ENABLED_NETIFS
 
 "integer number, or floating point number without a dot.
 syn match  ncppolicyNumber      "\<\d\+\>"
