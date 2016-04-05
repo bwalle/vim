@@ -1,7 +1,7 @@
 source ~/.vim/vimrc
 
 set bg=light
-set spelllang=de_de,en_gb spell
+"set spelllang=de_de,en_gb spell
 
 highlight mailQuoted1 ctermfg=darkblue
 highlight mailQuoted2 ctermfg=darkgreen
