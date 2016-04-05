@@ -617,20 +617,17 @@ function! s:FileChanged()
     echohl None
 endfunction
 
-function! QtClassDoc()
-    let qt_dir = "/usr/share/doc/qt/html/"
-    let class = tolower(expand("<cword>"))
-    silent execute "!exo-open --launch WebBrowser " . qt_dir . class . ".html &>/dev/null" . " &" | redraw!
-endfunction
-
-function! s:insert_gates()
+function! s:insert_gates(...)
   let gatename = substitute(toupper(expand("%:t")), "[^a-zA-Z0-9]", "_", "g") . "_"
+  if a:0 == 1
+      let gatename = toupper(a:1) . "_" . gatename
+  endif
   execute "normal! i#ifndef " . gatename
   execute "normal! o#define " . gatename . " "
   execute "normal! Go#endif /* " . gatename . " */"
   normal! ko
 endfunction
-command! IncGuard :call s:insert_gates()
+command! -nargs=? IncGuard :call s:insert_gates(<f-args>)
 
 " Opens an http URL on the current editor line in our favorite web browser
 function OpenURL()
