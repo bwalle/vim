@@ -646,6 +646,6 @@ if !has("gui_running")
     endif
 endif
 
-command! NcpCppHeader :0r $VIMDIR/ncp_cpp_header
+command! NcpCppHeader :keepalt 0r $VIMDIR/ncp_cpp_header
 
 " vim: set sw=4 ts=4 ft=vim foldmethod=marker:
