@@ -103,7 +103,7 @@ if version >= 700
 endif
 
 " aktuelle Tags
-set tags=./tags,./TAGS,tags,TAGS
+set tags=./tags,./TAGS,tags,TAGS,.tags
 
 " Nur zwischen Woertern umbrechen
 set linebreak
