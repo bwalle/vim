@@ -182,7 +182,7 @@ set et
 autocmd BufRead *.make set ft=make
 autocmd Filetype make set noet
 autocmd Filetype automake set noet
-autocmd Filetype c,cpp set noet ts=8 sw=8 tw=100
+autocmd Filetype c,cpp,objcpp set noet ts=8 sw=8 tw=100
 autocmd Filetype asm set ts=8 sw=8
 
 " HTML
@@ -200,8 +200,8 @@ au BufNewFile,BufRead /etc/lighttpd/*.conf,lighttpd.conf set filetype=lighttpd
 "   For other files switch it off.
 "   Don't change the order, it's important that the line with * comes first.
 "autocmd FileType *           set formatoptions=tcql nocindent comments&
-autocmd FileType c,cpp,java  setlocal cindent 
-autocmd FileType c,cpp,java  setlocal cinoptions=W1s,:0,N-s,g0
+autocmd FileType c,cpp,objcpp,java  setlocal cindent 
+autocmd FileType c,cpp,objcpp,java  setlocal cinoptions=W1s,:0,N-s,g0
 
 autocmd FileType tex         set sw=2 ts=2 et
 let g:Tex_SmartKeyQuote = 0
@@ -546,9 +546,9 @@ au FileType moin iabbrev toc <<TableOfContents(2)>>
 au FileType moin iabbrev pre {{{<CR>}}}<Up>
 au FileType moin iabbrev footnote <<FootNote()>><Left><Left><Left>
 
-autocmd FileType c,cpp setlocal fdm=marker
-autocmd FileType c,cpp iabbrev begin_c #ifdef __cplusplus<CR>extern "C" {<CR>#endif<CR><C-d>
-autocmd FileType c,cpp iabbrev end_c #ifdef __cplusplus<CR>}<CR>#endif<CR><C-d>
+autocmd FileType c,cpp,objcpp setlocal fdm=marker
+autocmd FileType c,cpp,objcpp iabbrev begin_c #ifdef __cplusplus<CR>extern "C" {<CR>#endif<CR><C-d>
+autocmd FileType c,cpp,objcpp iabbrev end_c #ifdef __cplusplus<CR>}<CR>#endif<CR><C-d>
 
 
 autocmd FileType vcscommit setlocal tw=80 spelllang=en_gb spell
