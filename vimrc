@@ -201,7 +201,7 @@ au BufNewFile,BufRead /etc/lighttpd/*.conf,lighttpd.conf set filetype=lighttpd
 "   Don't change the order, it's important that the line with * comes first.
 "autocmd FileType *           set formatoptions=tcql nocindent comments&
 autocmd FileType c,cpp,objcpp,java  setlocal cindent 
-autocmd FileType c,cpp,objcpp,java  setlocal cinoptions=W1s,:0,N-s,g0
+autocmd FileType c,cpp,objcpp,java  setlocal cinoptions=W1s,:0,N-s,g0,(0
 
 autocmd FileType tex         set sw=2 ts=2 et
 let g:Tex_SmartKeyQuote = 0
