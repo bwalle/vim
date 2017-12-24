@@ -2,7 +2,6 @@
 " 	     File: packages.vim
 "      Author: Mikolaj Machowski
 "     Created: Tue Apr 23 06:00 PM 2002 PST
-"         CVS: $Id: packages.vim 1071 2009-09-30 12:17:28Z tmaas $
 " 
 "  Description: handling packages from within vim
 "=============================================================================
@@ -398,8 +397,8 @@ function! Tex_ScanForPackages(...)
 		call Tex_Debug(":Tex_ScanForPackages: found package(s) [".@a."] on line ".line('.'), "pack")
 
 		" restore @a
-		let @a = saveA
-		let @" = saveUnnamed
+		call setreg("a", saveA, "c")
+		call setreg("\"", saveUnnamed, "c")
 	endwhile
 	call Tex_Debug(":Tex_ScanForPackages: End scan \\usepackage, detected packages = ".g:Tex_package_detected, "pack")
 

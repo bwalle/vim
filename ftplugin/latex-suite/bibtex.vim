@@ -4,7 +4,6 @@
 "        Author: Alan G Isaac <aisaac@american.edu>
 "                modified by Srinath Avadhanula for latex-suite.
 "       License: Vim Charityware license.
-"           CVS: $Id: bibtex.vim 997 2006-03-20 09:45:45Z srinathava $
 "=============================================================================
 
 " Fields:
@@ -248,18 +247,6 @@ function BibT(type, options, prompt)
 
 	return IMAP_PutTextWithMovement(retval)
 endfunction
-
-" }}}
-function! s:Input(prompt, ask) " {{{
-	if a:ask == 1
-		let retval = input(a:prompt)
-		if retval == ''
-			return "<++>"
-		endif
-	else
-		return "<++>"
-	endif
-endfunction 
 
 " }}}
 
