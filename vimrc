@@ -431,6 +431,7 @@ augroup END
 
 au FileType sh set sw=4 ts=4 et
 if filereadable(expand($VIMDIR . "/work"))
+    autocmd Filetype c,cpp,objcpp set noet ts=4 sw=4 tw=100
     let g:changelog_username="Bernhard Walle <bernhard.walle@ncp-e.com>"
     iabbrev soff Signed-off-by: Bernhard Walle <bernhard.walle@ncp-e.com>
     iabbrev email Bernhard Walle <bernhard.walle@ncp-e.com>
@@ -459,7 +460,7 @@ au FileType changes set tw=67
 au FileType changelog set ts=8
 
 iabbrev qheader From: <CR>Subject: <Up>
-iabbrev redmine Redmine-ID: 
+iabbrev rmid see Redmine 
 
 au BufRead,BufNewFile *.wiki set filetype=Wikipedia nonumber
 au BufRead,BufNewFile *wiki01.iis.fhg.de* setlocal filetype=moin
