@@ -557,6 +557,8 @@ autocmd FileType gitcommit setlocal spelllang=en_gb spell
 autocmd FileType perl setlocal fdm=syntax
 autocmd FileType gitannotate setlocal nowrap
 
+noremap <leader>cr :pyf $VIMDIR/clang-rename.py<cr>
+
 
 set tabline=%!MyTabLine()
 
