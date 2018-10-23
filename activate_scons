@@ -1,0 +1,12 @@
+#!/bin/sh
+
+id=$(xwininfo -root -tree | grep 'SCons Interactive' |grep -v xwininfo | awk '{print $1}')
+if [ -z "$id" ] ; then
+    echo "No window found"
+    exit 1
+fi
+
+xdotool windowactivate 0x1c00003
+sleep 0.5
+xdotool key Return
+xdotool key Alt+Tab

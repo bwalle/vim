@@ -3,9 +3,9 @@
 set nocompatible
 
 if $OS == "Windows_NT"
-    let $VIMDIR = "$HOME/vimfiles"
+    let $VIMDIR = expand($HOME . "/vimfiles")
 else
-    let $VIMDIR = "$HOME/.vim"
+    let $VIMDIR = expand($HOME . "/.vim")
 endif
 
 " Autokommando loeschen
@@ -558,7 +558,7 @@ autocmd FileType perl setlocal fdm=syntax
 autocmd FileType gitannotate setlocal nowrap
 
 noremap <leader>cr :pyf $VIMDIR/clang-rename.py<cr>
-
+map <F9> :! $VIMDIR/activate_scons<CR><CR>
 
 set tabline=%!MyTabLine()
 
