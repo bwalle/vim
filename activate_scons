@@ -6,7 +6,7 @@ if [ -z "$id" ] ; then
     exit 1
 fi
 
-xdotool windowactivate 0x1c00003
+xdotool windowactivate "$id"
 sleep 0.5
 xdotool key Return
 xdotool key Alt+Tab
