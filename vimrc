@@ -365,6 +365,9 @@ let g:clang_user_options = '|| exit 0'
 " command t
 nmap <silent> <Leader>g :CommandTBuffer<CR>
 
+" let g:airline#extensions#tabline#enabled = 1
+
+
 "                                                                          }}}
 " ----------------- Tasten ----------------------------------------------- {{{
 
