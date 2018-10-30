@@ -21,7 +21,7 @@ endif
 set nocursorline
 
 " Schriftart und Icons
-if has("gui_gtk3")
+if has("gui_gtk3") || has("gui_gtk2")
    " set guifontset=""
    " set guifont=Lucida\ Sans\ Typewriter\ 10
    " set guifont=Droid\ Sans\ Mono\ 10
