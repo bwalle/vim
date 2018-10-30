@@ -580,7 +580,6 @@ guilt
 NFS
 uImage
 Kernelkonfiguration
-<<<<<<< local
 gesourced
 env
 basyskom
@@ -2100,7 +2099,6 @@ Aufzählungstyp
 Aufzählungwerte
 Aufzählungstypen
 Ausgabeoperator
-#eisse
 Shellvariablen
 PS1
 bash
@@ -2173,3 +2171,5 @@ Kindprozess
 Subshell
 Signalnummer
 sleep
+Streams
+VirtualBox
