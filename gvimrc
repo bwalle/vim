@@ -34,7 +34,7 @@ if has("gui_gtk3") || has("gui_gtk2")
    " set guifont=Liberation\ Mono\ 10
    " set guifont=Inconsolata-g\ Medium\ 10
    " set guifont=Source\ Code\ Pro\ 10.4
-   set guifont=Hack\ 12
+   set guifont=Ubuntu\ Mono\ 14
    set toolbariconsize=medium
 endif
 if has("gui_win32")
