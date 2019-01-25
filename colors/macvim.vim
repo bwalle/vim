@@ -1,6 +1,7 @@
 " MacVim colorscheme
 "
-" Maintainer:   Bjorn Winckler <bjorn.winckler@gmail.com>
+" Author:       Bjorn Winckler <bjorn.winckler@gmail.com>
+" Maintainer:   macvim-dev (https://github.com/macvim-dev)
 " Last Change:  2008 May 9
 "
 " This is the default MacVim color scheme.  It supports both light and dark
@@ -74,46 +75,27 @@ hi Underlined   gui=underline guifg=SteelBlue1
 
 if &background == "dark"
   hi Boolean      gui=NONE guifg=DeepPink4 guibg=NONE
-  hi Comment      guifg=CadetBlue3
+  hi Comment      gui=italic guifg=CadetBlue3
   hi Constant     gui=NONE guifg=Goldenrod1 guibg=NONE
   hi Cursor       guibg=LightGoldenrod guifg=bg
   hi CursorColumn guibg=Gray20
   hi CursorIM     guibg=LightSlateGrey guifg=bg
-  hi CursorLine   guibg=NONE
+  hi CursorLine   guibg=Gray20
   hi DiffChange   guibg=MediumPurple4
   hi DiffDelete   gui=bold guifg=White guibg=SlateBlue
   hi DiffText     gui=NONE guifg=White guibg=SteelBlue
-  hi LineNr       guifg=#552A7B guibg=Grey10
-  hi CursorLineNr guifg=Grey60 gui=NONE
+  hi LineNr       guifg=#552A7B guibg=Grey5
   hi MatchParen   guifg=White guibg=Magenta
-  hi Normal       guifg=Grey50 guibg=Grey5
-  hi Search       guibg=Grey20 guifg=NONE
+  hi Normal       guifg=Grey50 guibg=Grey10
+  hi Search       guibg=Blue4 guifg=NONE
   hi Statement    gui=bold guifg=Purple1 guibg=NONE
   hi Todo         gui=NONE guifg=Green4 guibg=DeepSkyBlue1
   hi Type         gui=bold guifg=Cyan4 guibg=NONE
   hi WildMenu     guibg=SkyBlue guifg=White
   hi lCursor      guibg=LightSlateGrey guifg=bg
-  hi ColorColumn      guifg=NONE              guibg=#222222           gui=none
-  hi ColorColumn      ctermfg=NONE            ctermbg=94              cterm=none
 else
-  hi doxygenBrief                  gui=NONE guifg=#4a708b   guibg=NONE gui=bold
-  hi doxygenParam                  gui=NONE guifg=#4a708b   guibg=NONE
-  hi doxygenPrev                   gui=NONE guifg=DarkBlue  guibg=NONE
-  hi doxygenSmallSpecial           gui=NONE guifg=DarkBlue  guibg=NONE
-  hi doxygenSpecial                gui=NONE guifg=DarkBlue  guibg=NONE
-  hi doxygenComment                gui=NONE guifg=DarkBlue  guibg=NONE
-  hi doxygenSpecial                gui=NONE guifg=#4a708b   guibg=NONE
-  hi doxygenSpecialMultilineDesc   gui=NONE guifg=DarkBlue  guibg=NONE
-  hi doxygenSpecialOnelineDesc     gui=NONE guifg=DarkBlue  guibg=NONE
-  hi doxygenBody                   gui=NONE guifg=DarkBlue  guibg=NONE
-  hi doxygenSpecialTypeOnelineDesc gui=NONE guifg=DarkBlue  guibg=NONE
-  hi doxygenBOther                 gui=NONE guifg=#4a708b   guibg=NONE
-  hi doxygenParamName              gui=NONE guifg=#4a708b   guibg=NONE
-  hi doxygenSpecialHeading         gui=NONE guifg=DarkBlue  guibg=NONE
-  hi doxygenParamDirection         gui=NONE guifg=#4a708b   guibg=NONE
-
   hi Boolean      gui=NONE guifg=Red3 guibg=NONE
-  hi Comment      guifg=Blue2 guibg=NONE
+  hi Comment      gui=italic guifg=Blue2 guibg=NONE
   hi Constant     gui=NONE guifg=DarkOrange guibg=NONE
   hi Cursor       guibg=fg guifg=bg
   hi CursorColumn guibg=#F1F5FA
@@ -129,15 +111,12 @@ else
   else
     hi Normal       gui=NONE guifg=Black guibg=White
   endif
-  hi Search       guibg=#b5d5fc guifg=NONE
+  hi Search       guibg=CadetBlue1 guifg=NONE
   hi Statement    gui=bold guifg=Maroon guibg=NONE
   hi Todo         gui=NONE guifg=DarkGreen guibg=PaleGreen1
   hi Type         gui=bold guifg=Green4 guibg=NONE
   hi WildMenu     guibg=SkyBlue guifg=Black
   hi lCursor      guibg=fg guifg=bg
-  hi Visual       guibg=PaleTurquoise
-  hi ColorColumn      guifg=NONE              guibg=#DDDDDD           gui=none
-  hi ColorColumn      ctermfg=NONE            ctermbg=94              cterm=none
 endif
 
 
