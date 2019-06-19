@@ -143,7 +143,7 @@ if has("gui_macvim")
     "hi Normal  guibg=black
 else
     let g:solarized_italic=1
-    colorscheme monokai
+    colorscheme PaperColor
 endif
 
 " Keine Strings und Zahlen in C-Kommentaren

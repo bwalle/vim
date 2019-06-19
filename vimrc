@@ -147,6 +147,7 @@ set noruler
 
 " dark background
 set background=dark
+colorscheme PaperColor
 
 " save the swapfile /tmp instead of the current directory (makes vim more
 " responsive when using on slow directories such as NFS or even sshfs)
