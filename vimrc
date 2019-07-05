@@ -390,9 +390,11 @@ set hlsearch
 " short message
 set shm=a
 
-" akt. Datum
-imap <F2> <esc>:lan tim en_US<CR>a<C-R>=strftime("%a %b %d %Y")<CR><Esc>:lan tim de_DE.utf-8<CR>a
-imap <F3> <esc>:lan tim en_US<CR>a<C-R>=strftime("%a %b %e %H:%M:%S %Z %Y")<CR><Esc>:lan tim de_DE.utf-8<CR>a
+" cnext / cprev
+map  <F4> :cnext<cr>
+map  <F3> :cprev<cr>
+imap <F4> <Esc>:cnext<cr>
+imap <F3> <Esc>:cprev<cr>
 
 autocmd FileType svn    map <F9> :new<CR>:read !svn diff<CR>:set syntax=diff buftype=nofile<CR>gg 
 autocmd FileType svn    set binary noeol
