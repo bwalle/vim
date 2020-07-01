@@ -116,7 +116,6 @@ set wildmenu
 set wildmode=list:longest,full
 
 set wak=no
-set imdisable
 
 " zusammengehörige Klammern anzeigen
 set showmatch
@@ -176,7 +175,7 @@ autocmd FileType tex  set tw=78
 
 " Subversion commit files
 autocmd BufRead svn-commit.tmp* set tw=78 ft=svn
-autocmd BufRead COMMIT_EDITMSG setlocal ft=gitcommit noml spelllang=en_gb spell
+autocmd BufRead COMMIT_EDITMSG setlocal ft=gitcommit noml spelllang=en_gb spell tw=80 cc=+0
 
 " Tabs 
 set et
@@ -397,7 +396,7 @@ imap <F4> <Esc>:cnext<cr>
 imap <F3> <Esc>:cprev<cr>
 
 autocmd FileType svn    map <F9> :new<CR>:read !svn diff<CR>:set syntax=diff buftype=nofile<CR>gg 
-autocmd FileType svn    set binary noeol
+autocmd FileType svn    set binary noeol tw=80 cc=+0
 map <F7> :mak!<CR>
 
 map <F6> :!!<CR>
