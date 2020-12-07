@@ -1,0 +1,9 @@
+[submodule "pack/shapeshed/start/vim-airline"]
+	path = pack/shapeshed/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "pack/dist/start/vim-airline-themes"]
+	path = pack/dist/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "pack/editorconfig/start/editorconfig-vim"]
+	path = pack/editorconfig/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
