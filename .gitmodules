@@ -7,3 +7,6 @@
 [submodule "pack/editorconfig/start/editorconfig-vim"]
 	path = pack/editorconfig/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "pack/dist/start/vim-markdown"]
+	path = pack/dist/start/vim-markdown
+	url = https://github.com/tpope/vim-markdown

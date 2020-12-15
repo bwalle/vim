@@ -255,6 +255,9 @@ set makeprg=bmake\ \\\|&\ vim_error_filter
 let g:load_doxygen_syntax = 0
 let g:doxygen_enhanced_colour = 0
 
+" markdown
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+
 " Highlight
 let c_no_curly_error = 1
 
