@@ -43,7 +43,7 @@ if has("gui_win32")
 endif
 if has("gui_macvim")
   " set guifont=SF\ Mono\ Regular:h13
-  set guifont=Hack-Regular:h13
+  set guifont=CascadiaMono-Regular:h14
   set linespace=1
 	set transp=5
 	set blurradius=10
