@@ -179,6 +179,7 @@ syn keyword ncppolicyConstant       ISWINCE_POCKETPC
 syn keyword ncppolicyConstant       ISWINCE_SMARTPHONE
 syn keyword ncppolicyConstant       ISLINUX
 syn keyword ncppolicyConstant       WINDOWSSERVICEPACK
+syn keyword ncppolicyConstant       WINDOWSDISPLAYVERSION
 syn keyword ncppolicyConstant       ISWINDOWSNT
 syn keyword ncppolicyConstant       ISWINDOWS2000
 syn keyword ncppolicyConstant       ISWINDOWSXP
