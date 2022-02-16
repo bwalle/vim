@@ -11,6 +11,8 @@ endif
 " Autokommando loeschen
 autocmd! BufReadPost *
 
+
+
 set lazyredraw
 
 "
@@ -658,5 +660,9 @@ if !has("gui_running")
 endif
 
 command! NcpCppHeader :keepalt 0r $VIMDIR/ncp_cpp_header
+
+if $OS == "Windows_NT"
+  set rubydll=x64-ucrt-ruby310.dll
+endif
 
 " vim: set sw=4 ts=4 ft=vim foldmethod=marker:
