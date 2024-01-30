@@ -197,6 +197,8 @@ autocmd FileType kconfig set ts=8 sw=8 noet
 " lighttpd config
 au BufNewFile,BufRead /etc/lighttpd/*.conf,lighttpd.conf set filetype=lighttpd 
 
+autocmd BufNewFile,BufRead *.doxyfile set ft=doxygen
+
 " When starting to edit a file:
 "   For C and C++ files set formatting of comments and set C-indenting on.
 "   For other files switch it off.
