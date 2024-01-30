@@ -660,6 +660,7 @@ if !has("gui_running")
 endif
 
 command! NcpCppHeader :keepalt 0r $VIMDIR/ncp_cpp_header
+command! NcpPythonHeader :keepalt 0r $VIMDIR/ncp_python_header
 
 if $OS == "Windows_NT"
   set rubydll=x64-ucrt-ruby310.dll
