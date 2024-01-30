@@ -208,6 +208,7 @@ autocmd FileType c,cpp,objcpp,java  setlocal cindent
 autocmd FileType c,cpp,objcpp,java  setlocal cinoptions=W1s,:0,N-s,g0,(0
 
 autocmd FileType tex         set sw=2 ts=2 et
+autocmd FileType yaml        set sw=2 ts=2 et
 let g:Tex_SmartKeyQuote = 0
 
 "
